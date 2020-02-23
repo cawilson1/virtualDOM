@@ -10,11 +10,20 @@ const createVApp = count =>
     },
     children: [
       String(count), //each dom node has two nodes, text (this one) and element (below)
-      createElement("p", {
+      createElement("img", {
         attrs: {
-          id: "none"
-          //src: "https://media.giphy.com/media/6bBVmOPLsLZ3G/giphy.gif"
-        }
+          id: "none",
+          src: "https://media.giphy.com/media/6bBVmOPLsLZ3G/giphy.gif"
+        },
+        children: [
+          String(count), //each dom node has two nodes, text (this one) and element (below)
+          createElement("p", {
+            attrs: {
+              id: "notthis"
+              //src: "https://media.giphy.com/media/6bBVmOPLsLZ3G/giphy.gif"
+            }
+          })
+        ]
       })
     ]
   });
